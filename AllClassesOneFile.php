@@ -1,5 +1,4 @@
 <?php
-namespace carl;
 $testEmp1 = Test::testEmployeeSimple();
 print_r($testEmp1);
 
