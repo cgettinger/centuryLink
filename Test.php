@@ -5,7 +5,7 @@ use \centuryLink\Allocation;
 use \centuryLink\Employee;
 use \centuryLink\Department;
 
-function staging_autoload($class)
+function my_autoload($class)
 {
     $file = '';
     $class = trim(str_replace('\\', '/', $class), '/');
@@ -21,7 +21,7 @@ function staging_autoload($class)
         require_once $file;
     }
 }
-spl_autoload_register('CenturyLink\\staging_autoload');
+spl_autoload_register('CenturyLink\\my_autoload');
 
 $testEmp1 = Test::testEmployeeSimple();
 print_r($testEmp1);
